@@ -119,7 +119,7 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: UniM0cha/unim0cha.github.io # <gh-username>/<repo>
-    repo_id: UniM0cha
+    repo_id: R_kgDOM9O-tw
     category: Announcements
     category_id: DIC_kwDOM9O-t84CjKuO
     mapping: # optional, default to 'pathname'
