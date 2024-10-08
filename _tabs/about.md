@@ -10,14 +10,14 @@ Jeongyun Lee, solst_ice, UniM0cha
 
 # 🙋🏻‍♂️ About Me.
 
-- `Birth` | **1999년 2월 4일 (26세)**
+- `Birth`: **1999년 2월 4일 (26세)**
 
 ## Contact
 
-- `Phone` | **010-2474-6837**
-- `Email` | **solst_ice@naver.com** | solstice@samteon.com
-- `Github` | [**https://github.com/UniM0cha**](https://github.com/UniM0cha)
-- `Blog` | [UniM0cha 개인 블로그](https://unim0cha.github.io)
+- `Phone`: **010-2474-6837**
+- `Email`: **solst_ice@naver.com** | solstice@samteon.com
+- `Github`: [**https://github.com/UniM0cha**](https://github.com/UniM0cha)
+- `Blog`: [UniM0cha 개인 블로그](https://unim0cha.github.io)
 
 # 🏆 Awards.
 
@@ -108,20 +108,20 @@ Jeongyun Lee, solst_ice, UniM0cha
 
 ## Certificate
 
-- 정보처리산업기사 | 2022년 6월 17일
-- 컴퓨터활용능력 1급 | 2021년 3월 5일
+- 정보처리산업기사 / 2022년 6월 17일
+- 컴퓨터활용능력 1급 / 2021년 3월 5일
 
 ## Language / Library / Framework
 
-- **Java** | **Spring Boot** | JPA
-- **JavaScript** | TypeScript | Express | React | React Native | **NextJS**
-- SQL | MySQL
+- **Java** / **Spring Boot** / JPA
+- **JavaScript** / TypeScript / Express / React / React Native / **NextJS**
+- SQL / MySQL
 
 ## Tools
 
-- Notion | Git | **Github** | DBeaver
-- Visual Studio Code | **IntelliJ** | Eclipse
-- **AWS Amplify** | EC2 | S3 | Elastic Beanstalk
+- Notion / Git / **Github** / DBeaver
+- Visual Studio Code / **IntelliJ** / Eclipse
+- **AWS Amplify** / EC2 / S3 / Elastic Beanstalk
 
 # 🏃🏻‍♂️ Activities.
 
