@@ -15,7 +15,7 @@ Jeongyun Lee, solst_ice, UniM0cha
 ## Contact
 
 - `Phone`: **010-2474-6837**
-- `Email`: **solst_ice@naver.com** | solstice@samteon.com
+- `Email`: **solst_ice@naver.com** / solstice@samteon.com
 - `Github`: [**https://github.com/UniM0cha**](https://github.com/UniM0cha)
 - `Blog`: [UniM0cha 개인 블로그](https://unim0cha.github.io)
 
