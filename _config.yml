@@ -14,12 +14,11 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 밤이 유난히 긴 날, solst_ice # the main title
+title: UniM0cha # the main title
 
-tagline: 하꼬 개발자의 개발/일상 블로그입니다. :) # it will display as the subtitle
+tagline: 많은걸 해보고 싶은 개발자입니다. :) # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: UniM0cha의 개발/일상 블로그 # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -109,7 +108,7 @@ toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -119,10 +118,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: UniM0cha/unim0cha.github.io # <gh-username>/<repo>
+    repo_id: UniM0cha
+    category: Announcements
+    category_id: DIC_kwDOM9O-t84CjKuO
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
