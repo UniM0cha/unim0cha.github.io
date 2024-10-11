@@ -2,7 +2,8 @@
 layout: post
 title: Javascript 멋잇고 간결하게 쓰는 방법들
 date: 2024-10-09 13:13 +0900
-categories: [ "개발","Javascript" ]
+categories: ["개발", "Javascript"]
+tags: ["Javascript"]
 ---
 
 ## 3항 연산자
@@ -13,9 +14,9 @@ categories: [ "개발","Javascript" ]
 function getResult(score) {
   let result;
   if (score > 5) {
-    result = 'good';
+    result = "good";
   } else if (score <= 5) {
-    result = 'bad';
+    result = "bad";
   }
   return result;
 }
@@ -25,7 +26,7 @@ function getResult(score) {
 
 ```javascript
 function getResult(score) {
-  return score > 5 ? 'good' : 'bad';
+  return score > 5 ? "good" : "bad";
 }
 ```
 
@@ -37,7 +38,7 @@ function getResult(score) {
 function printMessage(text) {
   let message = text;
   if (text == null || text == undefined) {
-    message = 'Nothing to display';
+    message = "Nothing to display";
   }
   console.log(message);
 }
@@ -47,7 +48,7 @@ function printMessage(text) {
 
 ```javascript
 function printMessage(text) {
-  const message = text ?? 'Nothing to display';
+  const message = text ?? "Nothing to display";
   console.log(message);
 }
 ```
@@ -55,7 +56,7 @@ function printMessage(text) {
 번외) 디폴드 값은 undefined 만 구별할 수 있다.
 
 ```javascript
-function printMessage(text = 'Nothing to display') {
+function printMessage(text = "Nothing to display") {
   console.log(text);
 }
 ```
@@ -64,9 +65,9 @@ function printMessage(text = 'Nothing to display') {
 
 ```javascript
 const person = {
-  name: 'Julia',
+  name: "Julia",
   age: 20,
-  phone: '01077777777',
+  phone: "01077777777"
 };
 ```
 
@@ -84,7 +85,7 @@ function displayPerson(person) {
 
 ```javascript
 function displayPerson(person) {
-  const {name, age, phone} = person;
+  const { name, age, phone } = person;
   displayName(name);
   displayPhone(phone);
   displayProfile(name, age);
@@ -94,7 +95,7 @@ function displayPerson(person) {
 #### Better Code
 
 ```javascript
-function displayPerson({name, age, phone}) {
+function displayPerson({ name, age, phone }) {
   displayName(name);
   displayPhone(phone);
   displayProfile(name, age);
@@ -108,14 +109,14 @@ function displayPerson({name, age, phone}) {
 두 객체를 합치기
 
 ```javascript
-const item = {type: 'shirt', size: 'M'};
-const detail = {price: 20, made: 'Korea', gender: 'M'};
+const item = { type: "shirt", size: "M" };
+const detail = { price: 20, made: "Korea", gender: "M" };
 ```
 
 #### Bad Code
 
 ```javascript
-item['price'] = detail.price;
+item["price"] = detail.price;
 
 // 또는
 const newObject = {
@@ -123,7 +124,7 @@ const newObject = {
   size: item.size,
   price: detail.price,
   mad: detail.made,
-  gender: detail.gender,
+  gender: detail.gender
 };
 ```
 
@@ -136,21 +137,21 @@ const shirt0 = Object.assign(item, detail);
 #### Better Code
 
 ```javascript
-const shirt1 = {...item, ...detail};
+const shirt1 = { ...item, ...detail };
 ```
 
 ### Array
 
 ```javascript
-let fruits = ['수박', '오렌지', '바나나'];
+let fruits = ["수박", "오렌지", "바나나"];
 
 // fruits.push('딸기');
-fruits = [...fruits, '딸기'];
+fruits = [...fruits, "딸기"];
 
 // fruits.unshift('딸기');
-fruits = ['딸기', ...fruits];
+fruits = ["딸기", ...fruits];
 
-const fruits2 = ['멜론', '복숭아', '파인애플'];
+const fruits2 = ["멜론", "복숭아", "파인애플"];
 
 // let combined = fruits.concat(fruits2);
 let combined = [...fruits, ...fruits2];
@@ -160,15 +161,15 @@ let combined = [...fruits, ...fruits2];
 
 ```javascript
 const bob = {
-  name: 'Julia',
-  age: 20,
+  name: "Julia",
+  age: 20
 };
 const anna = {
-  name: 'Julia',
+  name: "Julia",
   age: 20,
   job: {
-    title: 'SoftwareEngineer',
-  },
+    title: "SoftwareEngineer"
+  }
 };
 ```
 
@@ -196,7 +197,7 @@ function displayJobTitle(person) {
 
 ```javascript
 function displayJobTitle(person) {
-  const title = person.job?.title ?? 'No Job Yet!';
+  const title = person.job?.title ?? "No Job Yet!";
   console.log(title);
 }
 ```
@@ -205,7 +206,6 @@ function displayJobTitle(person) {
 
 ```javascript
 const items = [1, 2, 3, 4, 5, 6];
-
 ```
 
 #### Bad Code
@@ -244,7 +244,7 @@ console.log(sum);
 const result = items
   .filter((num) => num % 2 === 0)
   .map((num) => num * 4)
-  .reducs((a, b) => a + b, 0)
+  .reducs((a, b) => a + b, 0);
 console.log(result);
 ```
 
@@ -277,6 +277,6 @@ async function displayUser() {
 ## 중복 요소 제거하기
 
 ```javascript
-const array = ['개', '고양이', '강아지', '말', '개', '고양이'];
+const array = ["개", "고양이", "강아지", "말", "개", "고양이"];
 const array2 = [...new Set(array)];
 ```
