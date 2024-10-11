@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript 멋잇고 간결하게 쓰는 방법들
+title: Javascript 멋있고 간결하게 쓰는 방법들
 date: 2024-10-09 13:13 +0900
 categories: ["개발", "Javascript"]
 tags: ["Javascript"]
