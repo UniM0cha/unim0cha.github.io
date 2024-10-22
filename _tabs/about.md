@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# 이정윤 | 코딩을 즐기는 개발자입니다.
+# 이정윤
 
 Jeongyun Lee, solst_ice, UniM0cha
 
