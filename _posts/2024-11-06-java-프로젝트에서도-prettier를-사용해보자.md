@@ -7,7 +7,7 @@ categories:
 tags:
   - Java
 image: "/assets/img/posts/fd1a01f2bffe5fedb8be6883abd090a9758c0b425f32f88e9aad6991d39a921d.png"
-date: 2024-11-06 21:25 +0900
+date: 2024-11-06 22:14 +0900
 ---
 
 ## Prettier?
