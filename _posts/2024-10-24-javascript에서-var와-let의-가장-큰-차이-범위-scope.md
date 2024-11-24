@@ -34,7 +34,7 @@ if (roles.includes("ROLE_ADMIN")) {
 회사에서 이런식으로 한 블록 내에 두개의 for 문을 써야할 때가 있었다.  
 호환성을 위해 ES5 문법을 써야했고, 나는 자연스럽게 for문 하나당 var를 사용하여 i를 선언했다.  
 그랬더니 아래와 같은 경고가 뜨는것이 아닌가!
-![picture 0](/assets/img/posts/15e3eadd1099251d33877e10f4f54abbe1281aed85be4749261c155cb41f9f93.png)
+![picture 0](/assets/img/posts/15e3eadd1099251d33877e10f4f54abbe1281aed85be4749261c155cb41f9f93.jpeg)
 
 오잉 난 분명 블록 범위 내에 다른 변수를 선언한건데… 하고 찾아보니 var는 다른 언어와 같이 블록 범위로 사용되지 않는다는 것을 알 수 있었다.
 

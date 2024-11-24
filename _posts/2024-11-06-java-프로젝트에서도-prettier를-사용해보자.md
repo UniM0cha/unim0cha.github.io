@@ -6,7 +6,7 @@ categories:
   - Java
 tags:
   - Java
-image: "/assets/img/posts/fd1a01f2bffe5fedb8be6883abd090a9758c0b425f32f88e9aad6991d39a921d.png"
+image: "/assets/img/posts/fd1a01f2bffe5fedb8be6883abd090a9758c0b425f32f88e9aad6991d39a921d.jpeg"
 date: 2024-11-06 22:14 +0900
 ---
 
@@ -46,11 +46,11 @@ npm install prettier prettier-plugin-java
 IntelliJ를 기준으로 설명합니다.
 
 1. [설정 > 도구 > 저장 시 액션] 에서 `Prettier 실행`에 체크 표시를 해준 후 마우스를 올려 `구성...`에 들어갑니다.
-   ![picture 0](/assets/img/posts/94ea179c82b51ae74da1c51718955b019f441a5352def626f821679bc45ebcd0.png)
+   ![picture 0](/assets/img/posts/94ea179c82b51ae74da1c51718955b019f441a5352def626f821679bc45ebcd0.jpeg)
 2. `자동 Prettier 구성`을 선택해주고,  
    `다음 파일에 대해 실행:` 부분에 있는 확장자들을 모두 지워서 `**/*`가 되도록 합니다.  
    (기본 설정은 Javascript 언어에 대해서만 실행하기 때문에 Java 파일에서도 적용되도록 한 것입니다.)
-   ![picture 1](/assets/img/posts/616fa634aab0208e7d68a64bb9a4d81ad944ccb7a6e13a807ebb0138c7397512.png)
+   ![picture 1](/assets/img/posts/616fa634aab0208e7d68a64bb9a4d81ad944ccb7a6e13a807ebb0138c7397512.jpeg)
 
 완료가 되었다면, 기존 파일에서 줄바꿈 등 변화를 준 뒤 저장하여 포맷팅이 제대로 되는지 확인할 수 있습니다.
 
