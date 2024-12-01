@@ -317,6 +317,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 Member member = memberRepository.findByEmail("이메일");
 Client client = member.getClient();
 ```
+물론 Repository로만 처리하기엔 복잡
 
 간단한 쿼리문을 작성할 때에는 쿼리메서드 사용,   
 복잡한 쿼리가 필요할 때는 고민 말고 JPQL 또는 QueryDSL 사용.  
