@@ -3,7 +3,6 @@ layout: post
 title: Javascript에서 var와 let의 가장 큰 차이, 범위(Scope)
 categories:
   - 개발
-  - Javascript
 tags:
   - Javascript
 date: 2024-10-24 19:56 +0900

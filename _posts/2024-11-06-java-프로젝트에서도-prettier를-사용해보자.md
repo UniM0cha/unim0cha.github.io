@@ -3,7 +3,6 @@ layout: post
 title: Java 프로젝트에서도 Prettier를 사용해보자
 categories:
   - 개발
-  - Java
 tags:
   - Java
 image: "/assets/img/posts/fd1a01f2bffe5fedb8be6883abd090a9758c0b425f32f88e9aad6991d39a921d.jpeg"

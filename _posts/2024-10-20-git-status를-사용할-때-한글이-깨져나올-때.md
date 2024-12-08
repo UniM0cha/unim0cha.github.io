@@ -3,7 +3,6 @@ layout: post
 title: git status를 사용할 때 한글이 깨져나올 때
 categories:
   - 개발
-  - Linux
 tags:
   - Linux
 date: 2024-10-20 22:38 +0900

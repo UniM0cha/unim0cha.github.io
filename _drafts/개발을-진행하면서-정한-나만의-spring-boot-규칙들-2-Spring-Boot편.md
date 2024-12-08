@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 개발을 진행하면서 정한 나만의 Spring Boot 규칙들
+title: 개발을 진행하면서 정한 나만의 Spring Boot 규칙들 (2. Spring boot 편)
 categories:
-  - 그리스도를 본받아 365
+  - 개발
+  - 나만의 Spring Boot 규칙
 tags:
-  - 묵상
+  - Java
+  - Spring boot
 image: /assets/img/posts/5380b89e3e00cded741001488af5df12ad46f949408ae3d848ea6f10e7624fd5.jpeg
 ---
 
@@ -317,15 +319,76 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 Member member = memberRepository.findByEmail("이메일");
 Client client = member.getClient();
 ```
-물론 Repository로만 처리하기엔 복잡
 
-간단한 쿼리문을 작성할 때에는 쿼리메서드 사용,   
-복잡한 쿼리가 필요할 때는 고민 말고 JPQL 또는 QueryDSL 사용.  
-그 중에서도 JPQL을 권장.  
-QueryDSL은 아직 빌드도구 간 연동 오류가 많이 발생함.  
-웬만하면 JPQL로 될텐데, 정 안된다면 Native Query.  
-QueryDSL로 되는거면 JPQL로도 된다.
+물론 Repository로만 처리하기엔 복잡한 상황이 있을 수 있습니다.
+
+따라서 저는 간단한 쿼리문을 작성할 때에는 쿼리메서드를 사용하고,  
+검색과 같이 조건이 많은 복잡한 쿼리가 필요할 때는  
+고민 말고 JPQL 또는 QueryDSL을 사용하여 쿼리메서드를 만듭니다.  
+그 중에서도 JPQL을 권장합니다.
+
+QueryDSL은 아직 빌드도구 간 연동 오류가 많이 발생합니다.  
+웬만하면 JPQL로 될텐데, 정 안된다면 Native Query를 사용합니다.  
+QueryDSL로 되는거면 JPQL로도 될 것입니다.  
+오히려 QueryDSL 문법을 학습하기보단 SQL과 구조가 비슷한 JPQL이 더 학습에 도움이 될 것입니다.
+
+## Spring Boot 관련
+
+### 5. 주입을 사용할 때 `@RequiredArgsConstructor` 어노테이션 사용
+
+Spring 자체에서도 필드 주입을 지양하는 것은 유명합니다.  
+따라서 되도록이면 생성자 주입을 사용해야하는데, 이때 생성자를 직접 작성하기보단  
+Lombok의 `@RequiredArgsConsturctor`를 사용합니다.
+`@RequiredArgsConsturctor`는 final로 선언된 필드에 대하여 생성자를 자동 생성해줍니다.  
+이것으로 코드가 깔끔해집니다.
+
+```java
+@Service
+@RequiredArgsConstructor
+public class ExampleService {
+
+  private final ExampleRepository exampleRepository;
+}
+```
+
+이 형태는 아래와 같은 과정을 거쳐서 만들어집니다.
+
+```java
+// 처음 형태
+@Service
+public class ExampleService {
+
+  private final ExampleRepository exampleRepository;
+
+  @Autowired
+  public ExampleService(ExampleRepository exampleRepository) {
+    this.exampleRepository = exampleRepository;
+  }
+}
+```
+
+```java
+@Service
+public class ExampleService {
+
+  private final ExampleRepository exampleRepository;
+
+  // @Autowired 생략 가능
+  public ExampleService(ExampleRepository exampleRepository) {
+    this.exampleRepository = exampleRepository;
+  }
+}
+```
+
+```java
+@Service
+@RequiredArgsConstructor // 생성자 축약
+public class ExampleService {
+
+  private final ExampleRepository exampleRepository;
+}
+```
 
 어쩌면 위의 규칙들이 성가셔보이고 '굳이 이렇게까지 해야하나?' 싶을 수 있는데,  
-개발 해보시면 아시겠지만 이런 사소한게 2~3시간 잡아먹게 합니다... 심하면 한달까지 갑니다.  
+개발 해보시면 아시겠지만 이런 사소한게 2~3시간 잡아먹게 합니다... 심하면 한달까지 갈 때도 있습니다.  
 그러기엔 개발자에겐 시간이 생명이니 기반을 단단하게 잡고 가자구요! :)
